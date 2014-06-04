@@ -55,7 +55,9 @@ alias get='git '
 
 ## Miscellaneous Aliases
 alias atop='sudo atop'
-alias feuerblitz='ssh -X feuerblitz'
+if [ "$(hostname)" != "feuerblitz"];then
+  alias feuerblitz='ssh -A -X feuerblitz'
+fi
 
 # Shell Functions
 # qfind - used to quickly find files that contain a string in a directory
