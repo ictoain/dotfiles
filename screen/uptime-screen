@@ -1,0 +1,2 @@
+#!/bin/zsh
+uptime|cut -d\  -f4-7|cut -d, -f1-2
