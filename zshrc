@@ -55,7 +55,7 @@ alias get='git '
 
 ## Miscellaneous Aliases
 alias atop='sudo atop'
-if [ "$(hostname)" != "feuerblitz"];then
+if [ "$(hostname)" != "feuerblitz" ];then
   alias feuerblitz='ssh -A -X feuerblitz'
 fi
 
