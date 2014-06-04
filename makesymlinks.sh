@@ -36,6 +36,8 @@ for file in $files; do
   if [ -f ~/.$file -o -d ~/.$file ];then
     echo "Moving existing dotfile $file from ~ to $olddir"
     mv ~/.$file $olddir
+  fi
+  if [ ! -L ~/.$file ];then
     echo "Creating symlink to $file in home directory."
     ln -s $dir/$file ~/.$file
   fi
