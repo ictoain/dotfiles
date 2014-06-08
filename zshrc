@@ -57,6 +57,7 @@ alias get='git '
 alias atop='sudo atop'
 if [ "$(hostname)" != "feuerblitz" ];then
   alias feuerblitz='ssh -A -X feuerblitz'
+  alias root@feuerblitz='ssh -A -X feuerblitz'
 fi
 
 # Shell Functions
