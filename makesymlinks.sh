@@ -14,7 +14,7 @@ files="bashrc vimrc zshrc screenrc screen oh-my-zsh"
 ##########
 
 # create dotfiles_old in homedir
-if [ ! -d ~/$olddir ];then
+if [ ! -d $olddir ];then
   echo -n "Creating $olddir for backup of any existing dotfiles in ~ ..."
   mkdir -p $olddir
   echo "done"
@@ -33,7 +33,7 @@ echo "done"
 #symlinks from the homedir to any files in the ~/dotfiles directory specified
 #in $files
 for file in $files; do
-  if [ -f ~/.$file -o -d ~/.$file ];then
+  if [ ! -L ~/.$file ]&&[ -f ~/.$file -o -d ~/.$file ];then
     echo "Moving existing dotfile $file from ~ to $olddir"
     mv ~/.$file $olddir
   fi
