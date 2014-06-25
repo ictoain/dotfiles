@@ -1,0 +1,10 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=STEM
+Comment=
+Icon=gpk-service-pack
+Exec=ssh -A -X feuerblitz /datengrab/gisdata/stem/stem.sh
+Path=
+Terminal=false
+StartupNotify=false

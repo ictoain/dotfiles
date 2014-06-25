@@ -1,0 +1,10 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Rdesktop Win8.1
+Comment=Rdesktop Win8.1
+Icon=computer
+Exec=rdesktop -k de -zf 192.168.1.202
+Path=
+Terminal=false
+StartupNotify=false

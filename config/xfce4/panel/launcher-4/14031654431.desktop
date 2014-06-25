@@ -1,0 +1,10 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=rdesktop lp-kbarth
+Comment=
+Icon=system
+Exec=rdesktop -k de -zf 192.168.1.101
+Path=
+Terminal=false
+StartupNotify=false
