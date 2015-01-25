@@ -9,7 +9,8 @@
 dir=~/.dotfiles                    # dotfiles directory
 olddir=~/.dotfiles_old             # old dotfiles backup directory
 #files="bashrc vimrc vim zshrc oh-my-zsh private scrotwm.conf Xresources"    # list of files/folders to symlink in homedir
-files="bashrc vimrc zshrc screenrc screen oh-my-zsh config/awesome"
+files="bashrc vimrc zshrc screenrc screen oh-my-zsh"
+configfiles="awesome"
 
 ##########
 
@@ -42,6 +43,17 @@ for file in $files; do
     ln -s $dir/$file ~/.$file
   fi
 done
+for file in $configfiles; do
+  if [ ! -L ~/.config/$file ]&&[ -f ~/.config/$file -o -d ~/.config/$file ];then
+    echo "Moving existing conffile .config/$file from ~ to $olddir"
+    mv ~/.config/$file $olddir
+  fi
+  if [ ! -L ~/.config/$file ];then
+    echo "Creating symlink to config/$file in home directory."
+    ln -s $dir/$file ~/.config/$file
+  fi
+done
+
 
 install_zsh () {
 # Test to see if zshell is installed.  If it is:
