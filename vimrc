@@ -66,6 +66,9 @@ if has("gui_running")
   endif
 else
   set background=dark
+  if &term == "xterm"
+    set t_ve+=[?81;0;112c
+  endif
 endif
 set laststatus=2          " last window always has a statusline
 set nohlsearch            " Don't continue to highlight searched phrases.
@@ -92,4 +95,8 @@ set nowrap                " don't wrap text
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " 06. Custom Commands                                                        "
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let spellconfigured = substitute(system('test -f .vim/spellrc&&echo yes||echo no'), '\n','','')
+if spellconfigured == "yes"
+  source ~/.vim/spellrc
+endif
 
