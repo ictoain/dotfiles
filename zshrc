@@ -28,7 +28,7 @@ COMPLETION_WAITING_DOTS="true"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Example format: plugins=(rails git textmate ruby lighthouse)
 #plugins=(git zsh-syntax-highlighting brew repo sudo knife bundler web-search systemadmin screen)
-plugins=(git rew repo sudo knife bundler web-search systemadmin screen)
+plugins=(git brew repo sudo knife bundler web-search systemadmin screen)
 
 source $ZSH/oh-my-zsh.sh
 
